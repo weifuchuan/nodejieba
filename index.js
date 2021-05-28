@@ -16,13 +16,13 @@ var exports ={
     if (!dictJson) {
       dictJson = {};
     }
-    dict         = dictJson.dict       || exports.DEFAULT_DICT;
-    hmmDict      = dictJson.hmmDict    || exports.DEFAULT_HMM_DICT;
-    userDict     = dictJson.userDict   || exports.DEFAULT_USER_DICT;
-    idfDict      = dictJson.idfDict    || exports.DEFAULT_IDF_DICT;
-    stopWordDict = dictJson.stopWordDict || exports.DEFAULT_STOP_WORD_DICT;
+    var dict         = dictJson.dict       || exports.DEFAULT_DICT;
+    var hmmDict = dictJson.hmmDict || exports.DEFAULT_HMM_DICT;
+    var userDict = dictJson.userDict || exports.DEFAULT_USER_DICT;
+    var idfDict = dictJson.idfDict || exports.DEFAULT_IDF_DICT;
+    var stopWordDict = dictJson.stopWordDict || exports.DEFAULT_STOP_WORD_DICT;
 
-    isDictLoaded = true;
+    var isDictLoaded = true;
     return nodejieba.load(dict, hmmDict, userDict, idfDict, stopWordDict);
   }
 };
